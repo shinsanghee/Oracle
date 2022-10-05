@@ -7,7 +7,7 @@ SELECT DISTINCT JOB, DEPTNO
 SELECT ENAME, SAL, SAL*12+COMM, COMM 
     FROM EMP;
 
-String sql = "SELECT ENAME, SAL, SAL*12+COMM AS "ANNSAL", COMM FROM EMP";
+String SQL = "SELECT ENAME, SAL, SAL*12+COMM AS "ANNSAL", COMM FROM EMP";
 
 SELECT * FROM EMP ORDER BY SAL;
 
@@ -37,7 +37,7 @@ SELECT * FROM EMP WHERE JOB = 'MANAGER'
                      OR JOB = 'SALESMAN'
                      OR JOB = 'CLERK';
 
-SELECT FROM EMP WHERE JOB IN ('MANAGER', 'SALESMAN', 'CLERK');
+SELECT * FROM EMP WHERE JOB IN ('MANAGER', 'SALESMAN', 'CLERK');
 
 SELECT * FROM EMP WHERE JOB != 'MANAGER'
                     AND JOB <> 'SALESMAN'
@@ -45,13 +45,13 @@ SELECT * FROM EMP WHERE JOB != 'MANAGER'
 
 SELECT * FROM EMP WHERE JOB NOT IN ('MANAGER', 'SALESMAN', 'CLERK');
 
-select * from emp where sal >=2000 and sal <=3000;
+SELECT * FROM emp WHERE sal >=2000 AND sal <=3000;
 
-select * from emp where sal between 2000 and 3000;
+SELECT * FROM emp WHERE sal BETWEEN 2000 and 3000;
 
-select * from emp where sal not between 2000 and 3000;
+SELECT * FROM emp WHERE sal NOT BETWEEN 2000 and 3000;
 
-select * from emp where ENAME like 'S%';
+SELECT * FROM emp WHERE ENAME LIKE 'S%';
 
 SELECT * FROM EMP WHERE ENAME LIKE '_L%';
 
@@ -59,17 +59,17 @@ SELECT * FROM EMP WHERE ENAME LIKE '%AM%';
 
 SELECT * FROM SOME_TABLE WHERE SOME_COLUMN LIKE 'A\_A%' ESCAPE '\';
 
-select ename, sal, sal*12+comm as annsal, comm from emp;
+SELECT ename, sal, sal*12+comm AS annsal, comm FROM emp;
 
-select * from emp where comm = null;
+SELECT * FROM emp WHERE comm = NULL;
 
-select * from emp where comm is null;
+SELECT * FROM emp WHERE comm IS NULL;
 
-select * from emp where MGR is not null;
+SELECT * FROM emp WHERE MGR IS NOT NULL;
 
-select * from emp where sal > null and comm is null;
+SELECT * FROM emp WHERE sal > NULL AND comm IS NULL;
 
-select * from EMP WHERE SAL > NULL AND COMM IS NULL;
+SELECT * FROM EMP WHERE SAL > NULL AND COMM IS NULL;
 
 select EMPNO, ENAME, SAL, DEPTNO FROM EMP WHERE DEPTNO = 10
 UNION SELECT EMPNO, ENAME, SAL, DEPTNO
